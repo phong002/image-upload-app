@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/fileManager.js" defer></script>
+</head>
+<body>
+  <h1>Upload Files</h1>
+  
+  <!-- Upload Form -->
+  <form id="upload-form">
+    <input type="file" id="file-input" name="file" required>
+    <button type="submit">Upload</button>
+  </form>
+
+  <!-- Return to Dashboard Button -->
+  <button id="return-to-dashboard">Return to Dashboard</button>
+
+  <div id="progress-bar"></div>
+
+  <script>
+    // Add event listener for "Return to Dashboard" button
+    document.getElementById('return-to-dashboard').addEventListener('click', function() {
+      window.location.href = 'dashboard.html'; // Redirect to the dashboard page
+    });
+  </script>
+</body>
+</html>

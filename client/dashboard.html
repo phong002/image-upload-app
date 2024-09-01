@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/fileManager.js" defer></script>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  
+  <!-- Navigation Buttons -->
+  <div class="navigation-buttons">
+    <button id="logout">Logout</button>
+    <button id="view-uploads">View Uploaded Images</button>
+    <button id="upload-images">Upload Images</button>
+    <button id="remove-all-images">Remove All Images</button> <!-- New button added -->
+  </div>
+
+  <!-- Uploaded Files List -->
+  <div id="file-list"></div>
+
+  <script>
+    // Event listener for "Upload Images" button
+    document.getElementById('upload-images').addEventListener('click', function() {
+      window.location.href = 'upload.html'; // Redirect to the upload page
+    });
+
+    // Event listener for "View Uploaded Images" button
+    document.getElementById('view-uploads').addEventListener('click', function() {
+      loadUploadedImages(); // Call function to display uploaded images
+    });
+
+    // Event listener for "Logout" button
+    document.getElementById('logout').addEventListener('click', function() {
+      localStorage.removeItem('token'); // Clear the stored token (or session)
+      window.location.href = 'login.html'; // Redirect to the login page
+    });
+  </script>
+</body>
+</html>
